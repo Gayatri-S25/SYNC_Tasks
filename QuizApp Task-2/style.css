@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Poppins:wght@300;400;500;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background:#669ffa;
+    font-family: 'Roboto',sans-serif;
+}
+
+.start_quiz{
+    /* text ko center me lene ke liye  */
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    border: 2px solid white;
+    padding:10px 30px;
+    color:#fff;
+    border-radius: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    transition:all 0.5s;
+}
+.start_quiz:hover{
+background-color:white;
+color:#669ffa;
+border:2px solid #2372f0;
+}
+
+/* display blank  */
+.inactive{
+    display:none;
+}
+
+.disabled{
+    pointer-events: none;
+}
+
+.quiz-box{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%); 
+    /* Above code is for bringing text in center   */
+    color:#fff;
+    border:2px solid white;
+    box-shadow:0 0 10px #777 ;
+    padding:50px;
+    width:100%;
+    max-width:600px;
+    background-color: rgb(0,0,0,0.6);
+    border-radius:7px;
+}
+
+.quiz-box h2{
+    font-size: 36px;
+}
+.quiz-box .option{
+    font-size: 18px;
+    border:2px solid #fff;
+    margin:20px;
+    padding:12px 15px;
+    border-radius:8px;
+    transition:all 0.3s;
+    cursor: pointer;
+    position: relative;
+
+}
+/* icons  */
+.quiz-box .option .fa{
+    position:absolute;
+    top:6px;
+    right:5px;
+    font-size:30px;
+    
+}
+/* if question is wrong  */
+.quiz-box .option .incorrect{
+    background: rgb(241, 153, 153);
+    color: rgb(184, 12, 12);
+    border-color: rgb(184, 12, 12);
+}
+/* if question is correct  */
+.quiz-box .option .correct{
+    background: rgb(157, 246, 157);
+    color: rgb(6, 138, 28);
+    border-color: rgb(6, 138, 28);
+}
+
+.quiz-box .option:hover{
+    background-color:#669ffa;   
+}
+
+.quiz-footer{
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top:2px dashed white;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left{
+    font-size: 18px;
+}
+
+.next-btn{
+    font-size: 18px;
+    border: 2px solid white;
+    border-radius:5px;
+    padding:10px;
+    transition:all 0.4s;
+    cursor: pointer;
+}
+/* hover effect on next question button  */
+.next-btn:hover{
+ background-color:#669ffa;
+ border:2px solid #2372f0;
+ font-size: 19px;
+
+}
+
+.result-box{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%); 
+    /* Above code is for bringing text in center   */
+    color:#fff;
+    box-shadow:0 0 10px #777 ;
+    width:100%;
+    max-width:600px;
+    background-color: rgb(0,0,0,0.6);
+    
+}
+.result-box h2{
+   font-size:36px;
+   background:#dfe1e6;
+   color:black ;
+   text-align:center;
+   padding:20px 0px;
+  
+}
+.result-box .result{
+    padding:40px;  
+}
+
+.result-box h3{
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.result-footer{
+    display:flex;
+    justify-content: space-around;
+    padding-bottom: 30px;
+
+}
+
+.result-footer .again-quiz,.result-footer .exit{
+    border:2px solid #fff;
+    border-radius:5px; 
+    padding:10px 20px;
+    font-size:24px;
+    cursor: pointer;
+}
+
+.result-footer .again-quiz{
+    background:#669ffa;
+    color: white;
+    border-color:#669ffa;
+    transition: all 0.3s;
+}
+
+.result-footer .again-quiz:hover{
+    background-color: #fff;
+    color: #669ffa;
+    border:2px solid white;
+    
+}
+
+.result-footer .exit{
+    background-color: #fff;
+    color: #669ffa;
+    border:2px solid white;
+    transition: all 0.3s;
+}
+
+.result-footer .exit:hover{
+    background:#669ffa;
+    color: white;
+    border-color:#669ffa;  
+}
